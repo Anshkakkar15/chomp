@@ -1,0 +1,63 @@
+
+.totalNumber{
+    background-color: #fafafa;
+    width: 60px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 0 10px 0 0px;
+    padding: 0 10px;
+    outline: none;
+    border: 2px solid #ccc;
+}
+
+
+.menuCard{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(30rem,1fr));
+    grid-gap: 20px;
+    place-items: center;
+    .container_wrapper{
+        place-items: center;
+        grid-template-columns: 1fr 3fr;
+        border: 2px solid rgba(204, 204, 204, 0.353);
+        transition: .3s ease-in-out;
+        &:hover{
+            border: 2px solid #35b8be;
+        }
+        @media only screen and (max-width:768px){
+            grid-template-columns: 1fr;
+        }
+
+    }
+    .foodImage{
+    overflow: hidden;
+    height: 120px;
+    width: 120px;
+    border-radius: 8px;
+    cursor: pointer;
+    @media only screen and (max-width:768px){
+        width: 100%;
+        height: 100%;
+        vertical-align: center;
+        padding: 20px;
+        border-radius: 30px;
+    }
+}
+.menuContent{
+    padding-left: 10px;
+    padding-right: 7px;
+    @media only screen and (max-width:768px){
+           padding: 20px;
+    }
+}
+    @media only screen and (max-width:768px){
+            grid-template-columns: repeat(auto-fit , minmax(15rem,1fr));
+    }
+}
+
+.price{
+    text-align: right;
+     @media only screen and (max-width:768px){
+        text-align: left;
+    }
+}

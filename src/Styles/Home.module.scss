@@ -1,0 +1,101 @@
+.banner_section {
+  background: url("../Assets/Index/background.svg") no-repeat;
+  background-position: top right;
+  padding: 100px 3% 140px;
+  overflow: hidden;
+  h1 {
+    font-size: 50px;
+    @media only screen and (max-width: 770px) {
+      font-size: 30px;
+      text-align: center;
+      overflow-x: hidden;
+    }
+  }
+
+  p {
+    padding-bottom: 15px;
+    @media only screen and (max-width: 770px) {
+      text-align: center;
+      font-size: 15px;
+    }
+  }
+
+  .heroLogo {
+    flex-direction: column;
+
+    @media only screen and (max-width: 770px) {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .heroImage {
+    @media only screen and (max-width: 770px) {
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      display: block;
+    }
+  }
+}
+
+.content_section {
+  margin: 0 20px;
+  padding: 0 0 30px 0;
+  overflow-x: hidden;
+  background-color: transparent;
+  background-image: url("../Assets/Index/userbackground.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .left_content {
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../Assets/Index/yumyum.png");
+
+    h2 {
+      font-size: 50px;
+      @media only screen and (max-width: 770px) {
+        padding-top: 50px;
+        text-align: center;
+      }
+    }
+      p {
+    @media only screen and (max-width: 770px) {
+      text-align: center;
+      font-size: 15px;
+    }
+  }
+  }
+
+  .heroImage {
+    @media only screen and (max-width: 770px) {
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      display: block;
+    }
+  }
+  @media only screen and (max-width:770px){
+    margin: 0;
+  }
+}
+
+.cta_img{
+  background-image: url('../Assets/Company/background.jpg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100% !important;
+  min-height: 500px;
+}
+
+.right_section{
+  background-color: #35b8be;
+  min-height: 500px;
+    h1{
+      color: white;
+      font-size:40px;
+      span{
+        color: #1b9097;
+      }
+    }
+}

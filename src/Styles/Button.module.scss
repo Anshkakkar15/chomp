@@ -1,0 +1,16 @@
+.button{
+    color: white;
+    background-color: #35b8be;
+    background-image: url('../Assets/Images/background.svg');
+    background-position: 50px;
+    outline: none;
+    border: none;
+    padding:15px 40px;
+    border-radius: 5px;
+    @media only screen and (max-width:770px){
+     display: block;
+    width: 100%;
+    margin: auto;
+    text-decoration: none;
+    }
+}

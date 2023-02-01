@@ -1,33 +1,34 @@
-$primary_color:#35b8be;
-$text_color:#546285;
+$primary_color: #35b8be;
+$text_color: #546285;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-html,body{
-    overflow-x: hidden;
+html,
+body {
+  overflow-x: hidden;
 }
-.chomp_primary_color{
-    color: #35b8be;
+.chomp_primary_color {
+  color: #35b8be;
 }
-.chomp_body_color{
-    color: #546285;
+.chomp_body_color {
+  color: #546285;
 }
-.chomp_background_color{
-    background-color: #35b8be;
+.chomp_background_color {
+  background-color: #35b8be;
 }
-.text_decoration{
-    text-decoration: none;
+.text_decoration {
+  text-decoration: none;
 }
-.primary-bg-img{
-    background-image: url('../Assets/Images/background.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-clip: border-box;
+.primary-bg-img {
+  background-image: url("../Assets/Images/background.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-clip: border-box;
 }
 
 input::-webkit-outer-spin-button,
@@ -36,62 +37,61 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-
-.no-apperance{
-     li{
-        height: 50px;
-        position: relative;
-    }
-    label{
-        padding: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 5px;   
-        width: 200px;
-        text-align: center;
-     }
+.no-apperance {
+  li {
+    height: 50px;
+    position: relative;
+  }
+  label {
+    padding: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+  }
 }
 .no-apperance input[type="radio"] {
   opacity: 0;
   z-index: 100;
 }
-.btnActive{
-    color: white;
-    background-color: #35b8be;
-    background-image: url('../Assets/Images/background.svg');
-    background-position: 50px;
-    outline: none;
-    border: none;
+.btnActive {
+  color: white;
+  background-color: #35b8be;
+  background-image: url("../Assets/Images/background.svg");
+  background-position: 50px;
+  outline: none;
+  border: none;
 }
 
 .icon {
-    width: 50px;
-    height: 50px;
-    padding: 17px;
-    font-size: 50px;
-    border-radius: 4px;
+  width: 50px;
+  height: 50px;
+  padding: 17px;
+  font-size: 50px;
+  border-radius: 4px;
 }
 
-.cart{
-    top: 0;
-    right: 0px;
-    height: 100vh;
-    overflow-y: auto;
-    width:100%;
-    z-index: 999;
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    transition: .5s linear;
-    overflow-x: hidden;
-     @media only screen and (max-width:900px) {
-       width: 100%;
-    }
-     @media only screen and (max-width:780px) {
-       width: 100%;
-    }
+.cart {
+  top: 0;
+  right: 0px;
+  height: 100vh;
+  overflow-y: auto;
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s linear;
+  overflow-x: hidden;
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+  }
+  @media only screen and (max-width: 780px) {
+    width: 100%;
+  }
 }
 
-.activeCart{
-    opacity: 1;
-    visibility: visible;
+.activeCart {
+  opacity: 1;
+  visibility: visible;
 }

@@ -1,13 +1,12 @@
 import React, { useContext, useState } from "react";
 import { ImCart, ImCross } from "react-icons/im";
-import { Link ,useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import Button from "../Button/Button";
 import dataContent from "../Context/Store";
 
 import logo from "../../Assets/Images/logo.svg";
 import styles from "../../Styles/Header.module.scss";
-import CartInput from "./CartInput";
 import { toast } from "react-hot-toast";
 
 const Header = () => {
@@ -19,7 +18,7 @@ const Header = () => {
     setActive(!isActive);
   };
 
-  const [cart, setCart] = useState(false)
+  const [cart, setCart] = useState(false);
 
   const cartActive = () => {
     setCart(!cart);
@@ -29,8 +28,33 @@ const Header = () => {
     setCartData(cartData.filter((data) => data !== el));
   };
 
-  const itemsPrice = cartData.reduce((amount, items) => amount + items.quantity * items.price, 0);  
+  const handleChange = (event, el) => {
+    const qty = event?.target?.value;
+    if (!event.target.value) {
+      setCartData(
+        cartData.map((data) => {
+          if (data.id === el.id) {
+            data.quantity = 0;
+          }
+          return data;
+        })
+      );
+    } else {
+      setCartData(
+        cartData.map((data) => {
+          if (data.id === el.id) {
+            data.quantity = qty;
+          }
+          return data;
+        })
+      );
+    }
+  };
 
+  const itemsPrice = cartData.reduce(
+    (amount, items) => amount + items.quantity * items.price,
+    0
+  );
 
   return (
     <div className={`${styles.header_component}`}>
@@ -156,7 +180,14 @@ const Header = () => {
                           </span>
                         </div>
                       </div>
-                      <CartInput cartQuantity={el?.quantity} />
+                      <input
+                        type="number"
+                        name="quantity"
+                        min={1}
+                        value={el.quantity <= 0 ? "" : el.quantity}
+                        className={`${styles.totalNumber}`}
+                        onChange={(event) => handleChange(event, el)}
+                      />
                     </div>
                   </div>
                 ))
@@ -183,7 +214,9 @@ const Header = () => {
               <div className={`${styles.subTotal} border-top`}>
                 <div className="d-flex justify-content-between align-items-center px-3">
                   <p className="fs-4 chomp_body_color">Subtotal</p>
-                  <p className="fs-4 fw-semibold">${itemsPrice.toString().slice(0,5)} USD</p>
+                  <p className="fs-4 fw-semibold">
+                    ${itemsPrice.toString().slice(0, 5)} USD
+                  </p>
                 </div>
                 <button
                   onClick={() =>

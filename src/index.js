@@ -20,7 +20,7 @@ root.render(
           <Toaster containerStyle={{ zIndex: "99999" }} />
           <ScrollToTop smooth style={{ backgroundColor: "#35b8be" }} />
         </Store>
-    </AutoScroll>
+      </AutoScroll>
     </BrowserRouter>
   </React.StrictMode>
 );
